@@ -28,7 +28,7 @@
                     <asp:Label runat="server" ID="restName"></asp:Label>
                 </div>
                 <div class="col-sm-3">
-                    <asp:Button ID="btnOrders" runat="server" Text="Orders"/>
+                    <asp:Button ID="btnAllOrders" runat="server" Text="Orders" OnClick="btnAllOrders_Click"/>
                 </div>
                 <div class="col-sm-3">
                     <asp:Button ID="btnAcctInfo" runat="server" Text="Update Account" Width="122px" OnClick="btnAcctInfo_Click"/>
@@ -39,13 +39,19 @@
             </div>
 
             <div id="divOrderGv" runat="server">
-                <asp:GridView ID="gvOrderss" runat="server" AutoGenerateColumns="false"></asp:GridView>
+                <asp:GridView ID="gvOrderss" runat="server" AutoGenerateColumns="false" ></asp:GridView>
                 <br />
                 <asp:Button ID="btnUpdateOrder" runat="server" Text="Update Orders" />
             </div>
             
             <div id="infoDiv" runat="server" visible ="false">
-                 <asp:GridView ID="gvRestInfo" runat="server" AutoGenerateColumns="False">
+
+                 <asp:Label ID="lblZEdit" runat="server">Update your Account Information Here! Click the "Edit Info" Button to edit.</asp:Label>
+
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <asp:GridView ID="gvRestInfo" runat="server" AutoGenerateColumns="False">
                     <Columns>
                         <asp:BoundField DataField="Name" HeaderText="Resturant Name" />
                         <asp:BoundField DataField="Email" HeaderText="Email" />
@@ -56,7 +62,18 @@
                         <asp:BoundField DataField="ResturantType" HeaderText="Resturant Type" />
                     </Columns>
                 </asp:GridView>
-                <asp:Button ID="btnEditRInfo" runat="server" Text="Edit Info" OnClick="btnEditRInfo_Click" />
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-5"></div>
+                    <div class="col-sm-2">
+                         <asp:Button ID="btnEditRInfo" runat="server" Text="Edit Info" OnClick="btnEditRInfo_Click" />
+                    </div>
+                    <div class="col-sm-5"></div>
+                </div>
+                
             </div>
 
 
@@ -151,7 +168,7 @@
                 <div class="row" id="btnSave">
                     <div class="col-sm-5"></div>
                     <div class="col-sm-2">
-                        <asp:Button ID="btnSaveAcct" runat="server" Text="Update Account" />
+                        <asp:Button ID="btnSaveAcct" runat="server" Text="Update Account" OnClick="btnSaveAcct_Click" />
                     </div>
                     <div class="col-sm-5"></div>
 

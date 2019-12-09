@@ -49,6 +49,24 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.Button btnOrder;
         
         /// <summary>
+        /// btnPayments control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnPayments;
+        
+        /// <summary>
+        /// btnCurrentOrder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCurrentOrder;
+        
+        /// <summary>
         /// infoDiv control.
         /// </summary>
         /// <remarks>
@@ -146,24 +164,6 @@ namespace WebApplication1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnUpdate;
-        
-        /// <summary>
-        /// btnPayments control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPayments;
-        
-        /// <summary>
-        /// btnViewOrders control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnViewOrders;
         
         /// <summary>
         /// paymentsDiv control.

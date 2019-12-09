@@ -67,8 +67,7 @@ namespace WebApplication1
             string custPassword = txtPassword.Text;
             string custDelAddy = txtDelAddy.Text;
             string custBillAddy = txtBillAddy.Text;
-            int loginID = Convert.ToInt32(Session["LoginID"].ToString());
-
+            string loginID = Session["LoginIDC"].ToString();
 
             bigCommand.CommandType = CommandType.StoredProcedure;
             bigCommand.CommandText = "TP_UpdateCustomer";
@@ -93,12 +92,41 @@ namespace WebApplication1
             bigCommand.Parameters.Add(param3);
             bigCommand.Parameters.Add(param4);
             bigCommand.Parameters.Add(param5);
-
-
-            DataSet dataSet = dBConnect.GetDataSetUsingCmdObj(bigCommand);
+            dBConnect.DoUpdateUsingCmdObj(bigCommand);
             bigCommand.Parameters.Clear();
 
+            
 
+            bigCommand.CommandType = CommandType.StoredProcedure;
+            bigCommand.CommandText = "TP_EditCust";
+            SqlParameter param6 = new SqlParameter("@custName", custName);
+            param6.Size = 50;
+
+            param6.Direction = ParameterDirection.Input;
+            param6.SqlDbType = SqlDbType.VarChar;
+            bigCommand.Parameters.Add(param6);
+            DataSet ds = dBConnect.GetDataSetUsingCmdObj(bigCommand);
+            bigCommand.Parameters.Clear();
+
+            gvCustInfo.DataSource = ds;
+            gvCustInfo.DataBind();
+
+            
+
+            infoDiv.Visible = true;
+            divAcctSet.Visible = false;
+        }
+
+        protected void btnOrder_Click(object sender, EventArgs e)
+        {
+            infoDiv.Visible = false;
+            divAcctSet.Visible = false;
+        }
+
+        protected void btnCurrentOrder_Click(object sender, EventArgs e)
+        {
+            infoDiv.Visible = false;
+            divAcctSet.Visible = false;
         }
     }
 }

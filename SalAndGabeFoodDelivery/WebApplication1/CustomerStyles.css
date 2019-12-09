@@ -31,6 +31,7 @@
 #btnOrder {
     background-color: black;
     color: firebrick;
+    height: 35px;
 }
 
 #btnAccount {
@@ -39,6 +40,46 @@
 }
 
 #btnEditInfo {
+    background-color: black;
+    color: firebrick;
+}
+
+#btnUpdate {
+    background-color: black;
+    color: firebrick;
+}
+
+#btnPayments {
+    background-color: black;
+    color: firebrick;
+}
+
+#btnViewOrders {
+    background-color: black;
+    color: firebrick;
+}
+
+#btnAllOrders {
+    background-color: black;
+    color: firebrick;
+}
+
+#btnAcctInfo {
+    background-color: black;
+    color: firebrick;
+}
+
+#btnPays {
+    background-color: black;
+    color: firebrick;
+}
+
+#btnEditRInfo {
+    background-color: black;
+    color: firebrick;
+}
+
+#btnSaveAcct {
     background-color: black;
     color: firebrick;
 }

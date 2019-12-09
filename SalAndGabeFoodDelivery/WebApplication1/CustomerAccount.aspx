@@ -31,8 +31,19 @@
                     <asp:Button runat="server" ID="btnResturants" Text="View Resturants" />
                 </div>
                 <div class="col-sm-3">
-                    <asp:Button runat="server" ID="btnOrder" Text="View Order"/>
+                    <asp:Button runat="server" ID="btnOrder" Text="View Order" OnClick="btnOrder_Click"/>
                 </div>
+            </div>
+
+            <div class="row" id="btnz">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-3">
+                        <asp:Button ID="btnPayments" runat="server" Text="Update Payments" />
+                    </div>
+                    <div class="col-sm-3">
+                        <asp:Button ID="btnCurrentOrder" runat="server" Text="Order Status" OnClick="btnCurrentOrder" />
+                    </div>
+                <div class="col-sm-3"></div>
             </div>
 
 
@@ -129,18 +140,13 @@
                 </div>
 
                 <div class="row" id="btnzz">
-                    <div class="col-sm-3"></div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-5"></div>
+                    <div class="col-sm-2">
                         <asp:Button ID="btnUpdate" runat="server" Text="Update Account" OnClick="btnUpdate_Click" />
                     </div>
-                    <div class="col-sm-3">
-                        <asp:Button ID="btnPayments" runat="server" Text="Update Payments" />
-                    </div>
-                    <div class="col-sm-3">
-                        <asp:Button ID="btnViewOrders" runat="server" Text="View Orders" />
+                    <div class="col-sm-5"></div>
                     </div>
                   </div>
-                </div>
 
             <div id="paymentsDiv" runat="server">
 

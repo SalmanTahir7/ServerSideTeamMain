@@ -31,13 +31,13 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.Label restName;
         
         /// <summary>
-        /// btnOrders control.
+        /// btnAllOrders control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnOrders;
+        protected global::System.Web.UI.WebControls.Button btnAllOrders;
         
         /// <summary>
         /// btnAcctInfo control.
@@ -92,6 +92,15 @@ namespace WebApplication1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl infoDiv;
+        
+        /// <summary>
+        /// lblZEdit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblZEdit;
         
         /// <summary>
         /// gvRestInfo control.
