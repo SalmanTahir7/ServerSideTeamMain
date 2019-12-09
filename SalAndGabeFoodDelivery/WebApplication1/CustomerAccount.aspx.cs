@@ -123,10 +123,9 @@ namespace WebApplication1
             divAcctSet.Visible = false;
         }
 
-        protected void btnCurrentOrder_Click(object sender, EventArgs e)
+        protected void btnResturants_Click(object sender, EventArgs e)
         {
-            infoDiv.Visible = false;
-            divAcctSet.Visible = false;
+            Response.Redirect("CustomerHome.aspx");
         }
     }
 }

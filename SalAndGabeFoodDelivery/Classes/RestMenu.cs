@@ -15,6 +15,7 @@ namespace Classes
         private string image;
         private string title;
         private string description;
+        private string price;
 
 
         public string ItemID
@@ -57,6 +58,12 @@ namespace Classes
         {
             get { return description; }
             set { description = value; }
+        }
+
+        public string Price
+        {
+            get { return price; }
+            set { price = value; }
         }
     }
 }

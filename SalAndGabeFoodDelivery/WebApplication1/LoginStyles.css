@@ -13,21 +13,21 @@
 #loginDiv {
     width: 40%;
     margin: auto;
-    border: 6px solid cyan;
+    border: 6px solid black;
     background-color: white;
 }
 
 #regDiv {
     width: 40%;
     margin: auto;
-    border: 6px solid cyan;
+    border: 6px solid black;
     background-color: white;
 }
 
 #regRestDiv {
     width: 40%;
     margin: auto;
-    border: 6px solid cyan;
+    border: 6px solid black;
     background-color: white;
 }
 

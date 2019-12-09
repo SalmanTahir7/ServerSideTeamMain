@@ -108,6 +108,7 @@ namespace SalAndGabeFoodDelivery
                             Session["resturant"] = user;
                             Session["userNameR"] = user.Name;
                             Session["LoginIDR"] = user.LoginID;
+                            Session["MenuID"] = user.MenuID;
                             Server.Transfer("ResturantHome.aspx");
                         }
 

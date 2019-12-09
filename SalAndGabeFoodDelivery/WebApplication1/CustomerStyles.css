@@ -84,8 +84,68 @@
     color: firebrick;
 }
 
+#btnOrder {
+    background-color: black;
+    color: firebrick;
+}
+
+#btnEditMenu {
+    background-color: black;
+    color: firebrick;
+}
+
+#btnMenu {
+    background-color: black;
+    color: firebrick;
+}
+#btnUpdateItem {
+    background-color: black;
+    color: firebrick;
+}
+
+#btnUpdateOrder {
+    background-color: black;
+    color: firebrick;
+}
+
+#btnRemoveItem {
+    background-color: black;
+    color: firebrick;
+}
+
+#btnAddItem {
+    background-color: black;
+    color: firebrick;
+}
+
+#btnAddNewItem {
+    background-color: black;
+    color: firebrick;
+}
+
 #infoDiv {
     margin: auto;
     width: 80%;
     border: 5px solid black;
+}
+
+#divMenu {
+    margin: auto;
+    width: 80%;
+    border: 5px solid black;
+}
+
+.divContainers {
+    margin: auto;
+    width: 80%;
+    border: 5px solid black;
+}
+
+#gvResturants{
+    margin: 0;
+}
+
+#divRestur{
+    width:100%;
+    margin:auto;
 }

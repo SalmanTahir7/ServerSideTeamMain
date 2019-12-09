@@ -48,7 +48,7 @@ namespace WebApplication1
                 CheckBox cbox = (CheckBox)gvResturants.Rows[i].FindControl("chxSelect");
                 if (cbox.Checked)
                 {
-                    string restMenu = gvResturants.Rows[i].Cells[1].Text;
+                    string restMenu = gvResturants.Rows[i].Cells[2].Text;
 
                     RestMenu menu = new RestMenu();
                     menu.Name = restMenu;
@@ -170,6 +170,34 @@ namespace WebApplication1
         {
             Response.Redirect("CustomerAccount.aspx");
             //Server.TransferRequest("CustomerAccount.aspx");
+        }
+
+        protected void btnAddToOrder_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < gvResturants.Rows.Count; i++)
+            {
+                CheckBox cbox = (CheckBox)gvResturants.Rows[i].FindControl("chxSelect");
+                if (cbox.Checked)
+                {
+                    int orderID = GenerateKey(4);
+                    int loginID = Session["LoginIDC"].ToString;
+
+                }
+            }
+        }
+
+        public int GenerateKey(int num)
+        {
+            int key;
+            Random rand = new Random();
+            string r = "";
+
+            for (int i = 0; i < num; i++)
+            {
+                r += rand.Next(0, 9).ToString();
+            }
+            key = Convert.ToInt32(r);
+            return key;
         }
     }
 }

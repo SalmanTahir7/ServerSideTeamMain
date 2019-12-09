@@ -63,17 +63,20 @@
                 
                 <br />
                 <div id="divRestur" runat="server">
-                    <asp:GridView ID="gvResturants" runat="server" AutoGenerateColumns="False" Height="155px" Width="1457px">
+                    <asp:GridView ID="gvResturants" runat="server" AutoGenerateColumns="False" Height="137px" Width="1272px">
                     <Columns>
                         <asp:TemplateField HeaderText="Choose your Resturant!">
                              <ItemTemplate>
                                  <asp:CheckBox ID="chxSelect" runat="server" />
                              </ItemTemplate>
                          </asp:TemplateField>
-                        <asp:BoundField DataField="Name" />
-                        <asp:BoundField DataField="Address" />
-                        <asp:BoundField DataField="PhoneNumber" />
-                        <asp:BoundField DataField="ResturantType" />
+                        <asp:ImageField DataImageUrlField ="Image">
+                            <ItemStyle Height="50px" Width="50px" />
+                        </asp:ImageField>
+                        <asp:BoundField DataField="Name" HeaderText="Resturant" />
+                        <asp:BoundField DataField="Address" HeaderText="Address" />
+                        <asp:BoundField DataField="PhoneNumber" HeaderText="Phone #" />
+                        <asp:BoundField DataField="ResturantType" HeaderText="Cusiene" />
                     </Columns>
                 </asp:GridView>
                     <asp:Button ID="btnViewMenu" runat="server" Text="View Menu" OnClick="btnViewMenu_Click" />
@@ -94,11 +97,16 @@
                                  <asp:CheckBox ID="chxSelect" runat="server" />
                              </ItemTemplate>
                          </asp:TemplateField>
-                            <asp:BoundField DataField="Image" />
+                            <asp:ImageField DataImageUrlField ="Images"></asp:ImageField>
                             <asp:BoundField DataField="FoodType" />
-                            <asp:BoundField DataField="Title" />
-                            <asp:BoundField DataField="Description" />
-                            <asp:BoundField DataField="Price" />
+                            <asp:BoundField DataField="Title"/>
+                            <asp:BoundField DataField="Description" headertext="Description"/>
+                            <asp:BoundField DataField="Price" headertext="Price"/>
+                            <asp:TemplateField HeaderText="Options">
+                                <ItemTemplate>
+                                    <asp:TextBox runat="server"></asp:TextBox>
+                                </ItemTemplate>
+                            </asp:TemplateField>
                         </Columns>
                     </asp:GridView>
                     <br />
@@ -108,7 +116,7 @@
                             <asp:Button ID="btnBack" runat="server" Text="Back to Resturants" OnClick="btnBack_Click" />
                         </div>
                         <div class="col-sm-3">
-                            <asp:Button ID="btnAddToOrder" runat="server" Text="Add to Order"/>
+                            <asp:Button ID="btnAddToOrder" runat="server" Text="Add to Order" OnClick="btnAddToOrder_Click"/>
                         </div>
                         <div class="col-sm-3"></div>
                     </div>

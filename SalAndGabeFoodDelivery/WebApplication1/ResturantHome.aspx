@@ -21,20 +21,201 @@
                 </div>
                 <div class="col-sm-2"></div>
             </div>
-            <br /><br />
 
             <div class="row" id="menuRow">
-                <div class="col-sm-3">
-                    <asp:Label runat="server" ID="restName"></asp:Label>
+                <div class="col-sm-4">
+                    <asp:Label runat="server" ID="lblRestName"></asp:Label>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-2">
+                    <asp:Button ID="btnMenu" runat="server" Text="Edit Menu"/>
+                </div>
+                <div class="col-sm-2">
                     <asp:Button ID="btnAllOrders" runat="server" Text="Orders" OnClick="btnAllOrders_Click"/>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-2">
                     <asp:Button ID="btnAcctInfo" runat="server" Text="Update Account" Width="122px" OnClick="btnAcctInfo_Click"/>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-2">
                     <asp:Button runat="server" ID="btnPays" Text="Payment Methods" Width="122px" />
+                </div>
+            </div>
+
+            <div id="divMenu" runat="server">
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <asp:GridView ID="gvMenu" runat="server" AutoGenerateColumns="False" Height="89px" Width="161px">
+                           <Columns>
+                            <asp:TemplateField HeaderText="Edit Item">
+                             <ItemTemplate>
+                                 <asp:CheckBox ID="chxSelect" runat="server" />
+                             </ItemTemplate>
+                         </asp:TemplateField>
+                            <asp:ImageField DataImageUrlField ="Images"></asp:ImageField>
+                            <asp:BoundField DataField="FoodType" />
+                            <asp:BoundField DataField="Title" />
+                            <asp:BoundField DataField="Description" />
+                            <asp:BoundField DataField="Price" />
+                            <asp:BoundField DataField="ItemID" Visible="false" />
+                        </Columns>
+                        </asp:GridView>
+
+                    </div>
+                    <div class="col-sm-2"></div>
+             </div>
+
+                    <div class="row" runat="server">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-2">
+                            <asp:Button ID="btnRemoveItem" runat="server" Text="Remove Item" OnClick="btnRemoveItem_Click" />
+                        </div>
+                        <div class="col-sm-2">
+                            <asp:Button ID="btnEditMenu" runat="server" Text="Edit Item" OnClick="btnEditMenu_Click" />
+                        </div>
+                        <div class="col-sm-2">
+                            <asp:Button ID="btnAddItem" runat="server" Text="New Item" OnClick="btnAddItem_Click" />
+                        </div>
+                        <div class="col-sm-3"></div>
+
+                    </div>
+            </div>
+
+            <div id="divEditMenu" class="divContainers" runat="server" visible="false">
+                <asp:Label ID="editLBL" runat="server">Edit an item from your menu:</asp:Label>
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3">
+                        <asp:Label runat="server">Item Image: </asp:Label>
+                    </div>
+                    <div class="col-sm-3">
+                        <asp:FileUpload runat="server" ID="fileMenupic"/>
+                    </div>
+                    <div class="col-sm-3"></div>
+                     </div>
+                
+                <br />
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3">
+                        <asp:Label runat="server">Item Type: </asp:Label>
+                    </div>
+                    <div class="col-sm-3">
+                        <asp:TextBox ID="txtItemType" runat="server"></asp:TextBox>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+
+                <br />
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3">
+                        <asp:Label runat="server">Item Title: </asp:Label>
+                    </div>
+                    <div class="col-sm-3">
+                        <asp:TextBox ID="txtItemTitle" runat="server"></asp:TextBox>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+
+                <br />
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3">
+                        <asp:Label runat="server">Item Description: </asp:Label>
+                    </div>
+                    <div class="col-sm-3">
+                        <asp:TextBox ID="txtItemDesc" runat="server"></asp:TextBox>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3">
+                        <asp:Label runat="server">Item Price: </asp:Label>
+                    </div>
+                    <div class="col-sm-3">
+                        <asp:TextBox ID="txtItemPrice" runat="server"></asp:TextBox>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-5"></div>
+                    <div class="col-sm-2">
+                         <asp:Button ID="btnUpdateItem" runat="server" Text="Edit Item" OnClick="btnUpdateItem_Click" />
+                    </div>
+                    <div class="col-sm-5"></div>
+                </div>
+
+            </div>
+
+            <div id="addItemDiv" runat="server" class="divContainers" visible="false">
+                <asp:Label ID="lblAdd" runat="server">Edit an item from your menu:</asp:Label>
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3">
+                        <asp:Label runat="server">Item Image: </asp:Label>
+                    </div>
+                    <div class="col-sm-3">
+                        <asp:FileUpload runat="server" ID="fileImageNew"/>
+                    </div>
+                    <div class="col-sm-3"></div>
+                     </div>
+                
+                <br />
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3">
+                        <asp:Label runat="server">Item Type: </asp:Label>
+                    </div>
+                    <div class="col-sm-3">
+                        <asp:TextBox ID="txtAddItemType" runat="server"></asp:TextBox>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+
+                <br />
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3">
+                        <asp:Label runat="server">Item Title: </asp:Label>
+                    </div>
+                    <div class="col-sm-3">
+                        <asp:TextBox ID="txtAddItemTitle" runat="server"></asp:TextBox>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+
+                <br />
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3">
+                        <asp:Label runat="server">Item Description: </asp:Label>
+                    </div>
+                    <div class="col-sm-3">
+                        <asp:TextBox ID="txtAddItemDesc" runat="server"></asp:TextBox>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3">
+                        <asp:Label runat="server">Item Price: </asp:Label>
+                    </div>
+                    <div class="col-sm-3">
+                        <asp:TextBox ID="txtAddItemPrice" runat="server"></asp:TextBox>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-5"></div>
+                    <div class="col-sm-2">
+                         <asp:Button ID="btnAddNewItem" runat="server" Text="Add Item" OnClick="btnAddNewItem_Click"/>
+                    </div>
+                    <div class="col-sm-5"></div>
                 </div>
             </div>
 
@@ -44,7 +225,7 @@
                 <asp:Button ID="btnUpdateOrder" runat="server" Text="Update Orders" />
             </div>
             
-            <div id="infoDiv" runat="server" visible ="false">
+            <div id="infoDiv" runat="server" class="divContainers" visible ="false">
 
                  <asp:Label ID="lblZEdit" runat="server">Update your Account Information Here! Click the "Edit Info" Button to edit.</asp:Label>
 
@@ -56,7 +237,7 @@
                         <asp:BoundField DataField="Name" HeaderText="Resturant Name" />
                         <asp:BoundField DataField="Email" HeaderText="Email" />
                         <asp:BoundField DataField="Password" HeaderText="Password" />
-                        <asp:BoundField DataField="Image" HeaderText="Image" />
+                        <asp:ImageField DataImageUrlField ="Image"></asp:ImageField>
                         <asp:BoundField DataField="Address" HeaderText="Address" />
                         <asp:BoundField DataField="PhoneNumber" HeaderText="Phone Number" />
                         <asp:BoundField DataField="ResturantType" HeaderText="Resturant Type" />
@@ -78,7 +259,7 @@
 
 
 
-            <div id="divUpdateAcctR" runat="server" visible="false">
+            <div id="divUpdateAcctR" runat="server" class="divContainers" visible="false">
 
                
 
@@ -91,7 +272,7 @@
                         <asp:Label runat="server">Resturant Image: </asp:Label>
                     </div>
                     <div class="col-sm-3">
-                        <input type="file" />
+                        <asp:FileUpload runat="server"/>
                     </div>
                     <div class="col-sm-3"></div>
                      </div>

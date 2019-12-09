@@ -104,6 +104,8 @@
     <Content Include="Images\mcchicken.jpg" />
     <Content Include="Images\mcdonalds.jpg" />
     <Content Include="Images\mcDouble.jfif" />
+    <Content Include="Images\McDouble.jpg" />
+    <Content Include="Images\mcdoublee.jfif" />
     <Content Include="Images\mcFlurry.jpg" />
     <Content Include="Images\mozzSticks.jpg" />
     <Content Include="Images\nachos.jpg" />
