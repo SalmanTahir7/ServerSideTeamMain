@@ -1,0 +1,50 @@
+﻿body {
+}
+
+#restDiv{
+    margin:auto;
+    width:70%;
+}
+
+#headRow {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    color: firebrick;
+    font-size: 40px;
+}
+
+#menuRow {
+    width: 100%;
+    height: 70px;
+    background-color: firebrick;
+    color: black;
+    font-size: 20px;
+}
+
+#btnResturants{
+    background-color:black;
+    color:firebrick;
+}
+
+
+#btnOrder {
+    background-color: black;
+    color: firebrick;
+}
+
+#btnAccount {
+    background-color: black;
+    color: firebrick;
+}
+
+#btnEditInfo {
+    background-color: black;
+    color: firebrick;
+}
+
+#infoDiv {
+    margin: auto;
+    width: 80%;
+    border: 5px solid black;
+}
