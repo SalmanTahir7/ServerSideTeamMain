@@ -26,9 +26,7 @@
                     <asp:Label runat="server" ID="lblCustName"></asp:Label>
                 </div>
                 <div class="col-sm-3"></div>
-                <div class="col-sm-3">
-                    <asp:Button runat="server" ID="btnOrder" Text="View Order"/>
-                </div>
+                <div class="col-sm-3"></div>
                 <div class="col-sm-3">
                     <asp:Button runat="server" ID="btnAccount" Text="Account" OnClick="btnAccount_Click" />
                 </div>
@@ -63,7 +61,7 @@
                 
                 <br />
                 <div id="divRestur" runat="server">
-                    <asp:GridView ID="gvResturants" runat="server" AutoGenerateColumns="False" Height="137px" Width="1272px">
+                    <asp:GridView ID="gvResturants" runat="server" AutoGenerateColumns="False" Height="16px" Width="769px">
                     <Columns>
                         <asp:TemplateField HeaderText="Choose your Resturant!">
                              <ItemTemplate>
@@ -107,6 +105,8 @@
                                     <asp:TextBox runat="server"></asp:TextBox>
                                 </ItemTemplate>
                             </asp:TemplateField>
+                            <asp:BoundField DataField="MenuID" Visible="false" />
+                            <asp:BoundField DataField="ItemID" Visible="false" />
                         </Columns>
                     </asp:GridView>
                     <br />
@@ -118,7 +118,31 @@
                         <div class="col-sm-3">
                             <asp:Button ID="btnAddToOrder" runat="server" Text="Add to Order" OnClick="btnAddToOrder_Click"/>
                         </div>
-                        <div class="col-sm-3"></div>
+                        <div class="col-sm-3">
+                        <asp:Button runat="server" ID="btnOrder" Text="View Order" OnClick="btnOrder_Click"/>
+                        </div>
+                    </div>
+                    <br /><br />
+                </div>
+
+                <div id="divOrderSubmit" runat="server" visible="false">
+                    <div class="row" runat="server">
+                       
+                        <asp:GridView ID="gvOrder" runat="server" AutoGenerateColumns="False">
+                            <Columns>
+                             <asp:TemplateField HeaderText="View to your order!">
+                             <ItemTemplate>
+                                 <asp:CheckBox ID="chxSelect" runat="server" />
+                             </ItemTemplate>
+                         </asp:TemplateField>
+                                <asp:BoundField DataField="OrderID" HeaderText="OrderID"/>
+                                <asp:BoundField DataField="Status" HeaderText="Status"/>
+                                <asp:BoundField DataField="DateTime" HeaderText="Date/Time"/>
+                            </Columns>
+                        </asp:GridView>
+                        <br />
+                        <asp:Button ID="btnOrderS2" runat="server" Text="View Order" />
+
                     </div>
                 </div>
             </div>

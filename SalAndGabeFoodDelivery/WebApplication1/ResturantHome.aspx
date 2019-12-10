@@ -219,8 +219,15 @@
                 </div>
             </div>
 
-            <div id="divOrderGv" runat="server">
-                <asp:GridView ID="gvOrderss" runat="server" AutoGenerateColumns="false" ></asp:GridView>
+            <div id="divOrderGv" class="divContainers" runat="server" visible="false";>
+                <asp:Label ID="lblSEE" runat="server">View and Update your orders!</asp:Label><br />
+                <asp:GridView ID="gvOrderss" runat="server" AutoGenerateColumns="False" >
+                    <Columns>
+                        <asp:BoundField DataField="OrderID" HeaderText="Order #" />
+                        <asp:BoundField DataField="Status" HeaderText="Order Status" />
+                        <asp:BoundField DataField="DateTime" HeaderText="Date &amp; Time" />
+                    </Columns>
+                </asp:GridView>
                 <br />
                 <asp:Button ID="btnUpdateOrder" runat="server" Text="Update Orders" />
             </div>

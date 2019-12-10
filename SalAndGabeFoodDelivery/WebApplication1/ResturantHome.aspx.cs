@@ -141,8 +141,23 @@ namespace WebApplication1
             divUpdateAcctR.Visible = false;
         }
 
+        //view all orders 
         protected void btnAllOrders_Click(object sender, EventArgs e)
         {
+            string restMenuID = (string)Session["MenuID"];
+
+            bigCommand.CommandType = CommandType.StoredProcedure;
+            bigCommand.CommandText = "TP_AllOrders";
+
+            SqlParameter param = new SqlParameter("@restMenuID", restMenuID);
+            param.Direction = ParameterDirection.Input;
+            bigCommand.Parameters.Add(param);
+            dBConnect.DoUpdateUsingCmdObj(bigCommand);
+            bigCommand.Parameters.Clear();
+            DataSet dataSet = dBConnect.GetDataSetUsingCmdObj(bigCommand);
+
+            gvOrderss.DataSource = dataSet;
+            gvOrderss.DataBind();
 
         }
 

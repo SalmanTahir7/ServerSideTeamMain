@@ -31,7 +31,6 @@
                     <asp:Button runat="server" ID="btnResturants" Text="View Resturants" OnClick="btnResturants_Click" />
                 </div>
                 <div class="col-sm-3">
-                    <asp:Button runat="server" ID="btnOrder" Text="View Order" OnClick="btnOrder_Click"/>
                 </div>
             </div>
 
@@ -41,7 +40,6 @@
                         <asp:Button ID="btnPayments" runat="server" Text="Update Payments" />
                     </div>
                     <div class="col-sm-3">
-                        <asp:Button ID="btnCurrentOrder" runat="server" Text="Order Status" />
                     </div>
                 <div class="col-sm-3"></div>
             </div>

@@ -3,7 +3,7 @@
 
 #restDiv{
     margin:auto;
-    width:70%;
+    width:100%;
 }
 
 #headRow {
@@ -39,12 +39,33 @@
     color: firebrick;
 }
 
+#btnViewMenu {
+    background-color: black;
+    color: firebrick;
+}
+
 #btnEditInfo {
     background-color: black;
     color: firebrick;
 }
 
+#btnOrderS2 {
+    background-color: black;
+    color: firebrick;
+}
+
+#btnBack {
+    background-color: black;
+    color: firebrick;
+}
+
 #btnUpdate {
+    background-color: black;
+    color: firebrick;
+}
+
+
+#btnAddToOrder {
     background-color: black;
     color: firebrick;
 }
